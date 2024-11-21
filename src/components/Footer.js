@@ -3,7 +3,29 @@ import instagram from "../assets/images/instagram.svg";
 import twitter from "../assets/images/twitter.svg";
 import youtube from "../assets/images/youtube.svg";
 import "../assets/Footer.css"
+import FooterMenus from "./FooterMenus";
 function Footer() {
+    const menu1 = [
+        "Audio et sous-titres",
+        "Presse",
+        "Confidentialité",
+        "Nous contacter"
+    ];
+    const menu2 = [
+        "Autodescription",
+        "Relations investisseurs",
+        "Informations légales",
+    ];
+    const menu3 = [
+        "Centre d’aide",
+        "Recrutement",
+        "Préférences de cookies",
+    ];
+    const menu4 = [
+        "Cartes cadeaux",
+        "Conditions d’utilisation",
+        "Mentions légales",
+    ];
     return (
         <footer>
             <div className="social">
@@ -12,29 +34,7 @@ function Footer() {
                 <img src={twitter} alt="twitter"/>
                 <img src={youtube} alt="youtube"/>
             </div>
-            <div className="menu">
-                <ul>
-                    <li>Audio et sous-titres</li>
-                    <li>Presse</li>
-                    <li>Confidentialité</li>
-                    <li>Nous contacter</li>
-                </ul>
-                <ul>
-                    <li>Autodescription </li>
-                    <li>Relations investisseurs </li>
-                    <li>Informations légales </li>
-                </ul>
-                <ul>
-                    <li>Centre d’aide</li>
-                    <li>Recrutement</li>
-                    <li>Préférences de cookies</li>
-                </ul>
-                <ul>
-                    <li>Cartes cadeaux</li>
-                    <li>Conditions d’utilisation</li>
-                    <li>Mentions légales</li>
-                </ul>
-            </div>
+            <FooterMenus menu1= {menu1} menu2={menu2} menu3={menu3} menu4={menu4}  />
             <div className="btnService">
                 Service Code
             </div>

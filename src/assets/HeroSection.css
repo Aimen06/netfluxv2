@@ -1,0 +1,16 @@
+.heroBanniere {
+    background-color: #141414;
+}
+
+.heroBanniere__img {
+    max-width: 1440px;
+    width: 100dvw;
+    height: 636px;
+}
+
+.heroBanniere__img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
