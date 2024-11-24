@@ -22,10 +22,8 @@ function HeroSection() {
                     <div className="btn"><img src={play} alt="play icone"/>Lecture</div>
                     <div className="btn"><img src={plus} alt="plus icone"/>My List</div>
                 </div>
-
+            <p className="revoir">Revoir</p>
             </div>
-
-
         </div>
     )
 }

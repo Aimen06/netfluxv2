@@ -77,7 +77,14 @@ h3 {
     background-color: rgba(0, 0, 0, 0.32);
     border-radius: 10px;
     font-size: 18px;
+    font-weight: 900;
     width:155px;
     height:40px;
     padding : 12px 36px
+}
+
+.revoir {
+    margin-top: 65px;
+    font-size: 20px;
+    font-weight: bold;
 }

@@ -1,10 +1,15 @@
-function ReplayGallery(props)
+import "../assets/Gallery.css"
+function Replay(props)
 {
     return (
-        <div className="replay">
-
+        <div className="row">
+            {props.images.map(function (element) {
+                return(<div className="images">
+                   <img src={element} alt={element}/>
+                </div>)
+            })}
         </div>
     );
 }
 
-export default ReplayGallery;
+export default Replay;

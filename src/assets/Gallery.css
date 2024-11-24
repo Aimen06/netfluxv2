@@ -1,0 +1,31 @@
+.galleries {
+    background-color: #141414;
+    height: 402px;
+    padding-left: 60px;
+    overflow: hidden;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    gap:5px;
+    overflow-x: scroll;
+    -ms-overflow-style: none; /* Internet Explorer 10+ */
+    scrollbar-width: none; /* Firefox */
+}
+
+.row::-webkit-scrollbar {
+    display: none;
+}
+
+.images {
+    height: 124px;
+    width: 204px;
+    flex-shrink: 0;
+}
+
+.images img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
