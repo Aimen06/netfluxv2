@@ -1,7 +1,7 @@
 import "../assets/Gallery.css"
 import Replay from "./Replay";
+import Trends from "./Trends"
 import cards from "../assets/images/replay/cards.png"
-import chapo from "../assets/images/replay/chapo.png"
 import crown from "../assets/images/replay/crown.png"
 import dirtymoney from "../assets/images/replay/dirtymoney.png"
 import juventus from "../assets/images/replay/juventus.png"
@@ -36,9 +36,27 @@ function Galleries ()
         outer,
         ramna
     ];
+    const trendImg =  [
+        fast,
+        formula1,
+        kingsman,
+        outer,
+        ramna,
+        crown,
+        cards,
+        subura,
+        mirror,
+        juventus,
+        dirtymoney,
+        agence,
+        arcane,
+        breakingbad,
+        demon
+    ];
     return (
-        <div className='galleries'>
-        <Replay images={replayImg} />
+            <div className='galleries'>
+            <Replay images={replayImg} />
+            <Trends images={trendImg} />
     </div>
     )
 }
