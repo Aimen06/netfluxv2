@@ -1,0 +1,23 @@
+.categories-row {
+    display: flex;
+    overflow-x: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    gap:55px;
+    flex-shrink: 0;
+    background-color: #141414;
+    color: #f5f5f1;
+    padding-left: 60px;
+}
+
+.category {
+    font-family:"Helvetica Neue";
+    font-size: 20px;
+    font-weight: bold;
+    white-space: nowrap;
+
+}
+
+.category:hover {
+    text-decoration: underline red;
+}
