@@ -10,7 +10,7 @@ import "../assets/Original.css";
 
 function OriginalPrograms () {
     return (
-        <div className="original">
+        <div className="original-container">
             <div className="original-title">
                 <h4>
                     programmes originaux netflix
