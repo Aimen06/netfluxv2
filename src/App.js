@@ -4,6 +4,7 @@ import HeroSection from "./components/HeroSection";
 import Galleries from "./components/Galleries"
 import Pologne from "./components/Pologne";
 import Categories from "./components/Categories"
+import OriginalProgramms from "./components/OriginalPrograms"
 import {Children} from "react";
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Galleries />
         <Pologne />
         <Categories />
+        <OriginalProgramms />
         <Footer />
     </div>
   );
