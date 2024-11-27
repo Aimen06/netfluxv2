@@ -1,4 +1,4 @@
-.categories-row {
+.genre-row {
     display: flex;
     overflow-x: scroll;
     -ms-overflow-style: none;
@@ -10,14 +10,17 @@
     padding-left: 60px;
 }
 
-.category {
+.genre {
     font-family:"Helvetica Neue";
     font-size: 20px;
     font-weight: bold;
     white-space: nowrap;
+    height: 43px;
 
 }
 
-.category:hover {
-    text-decoration: underline red;
+.genre:hover {
+    text-decoration: underline;
+    text-decoration-color: red;
+    text-underline-offset: 15px;
 }
