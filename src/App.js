@@ -3,7 +3,8 @@ import Footer from "./components/Footer";
 import HeroSection from "./components/HeroSection";
 import Galleries from "./components/Galleries"
 import Pologne from "./components/Pologne";
-import Categories from "./components/Genre"
+import Genre from "./components/Genre"
+import Categories from "./components/Categories"
 import OriginalProgramms from "./components/OriginalPrograms"
 import {Children} from "react";
 function App() {
@@ -13,8 +14,9 @@ function App() {
         <HeroSection />
         <Galleries />
         <Pologne />
-        <Categories />
+        <Genre />
         <OriginalProgramms />
+        <Categories />
         <Footer />
     </div>
   );
