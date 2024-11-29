@@ -5,6 +5,7 @@ import notification from "../assets/images/notification.svg";
 import search from "../assets/images/search.svg";
 import avatar from "../assets/images/avatar.png";
 import burger from "../assets/images/burger.svg";
+import cross from "../assets/images/cross.svg";
 import icone1 from "../assets/images/dropdown/icone1.png";
 import icone2 from "../assets/images/dropdown/icone2.png";
 import icone3 from "../assets/images/dropdown/icone3.png";
@@ -19,12 +20,14 @@ import { useState } from "react";
 
 function Navbar() {
     const [dropdownActif, setDropdownActif] = useState(false);
+    const [sidebarActif, setsidebarActif] = useState(false);
 
     return (
         <header>
+            <div className={sidebarActif == true ? "overlay active" : "overlay"}></div>
             <div className="header__left">
-                <img className="logo" src={logo} alt="Netflix" />
-                <nav>
+                <img className="logo" src={logo} alt="Netflix"/>
+                <nav className={sidebarActif == true ? "active" : ""}>
                     <a className="">Découverte</a>
                     <a className="">Séries TV</a>
                     <a className="">Films</a>
@@ -33,16 +36,19 @@ function Navbar() {
                     <a className="">Ma liste</a>
                 </nav>
             </div>
-            <a className="burger">
-                <img className="burger__icon" src={burger} />
+            <a href="#" className="burger" onClick={() => setsidebarActif(true)}>
+                <img className="burger__icon" src={burger}/>
+            </a>
+            <a className={sidebarActif == true ? "closeSidebar active" : "closeSidebar"} onClick={() => setsidebarActif(false)}>
+                <img className="cross__icon" src={cross}/>
             </a>
             <div className="header__right">
                 <a>
-                    <img src={search} />
+                    <img src={search}/>
                 </a>
                 <a>Jeunesse</a>
                 <a>
-                    <img src={notification} />
+                    <img src={notification}/>
                 </a>
 
                 <div className="dropdown__container">
@@ -51,15 +57,16 @@ function Navbar() {
                         href="#"
                         onClick={() => setDropdownActif(!dropdownActif)}
                     >
-                        <img src={avatar} />
-                        <img className={dropdownActif == true ? "avatar__dropdown active" : "avatar__dropdown"} src={dropdown} />
+                        <img src={avatar}/>
+                        <img className={dropdownActif == true ? "avatar__dropdown active" : "avatar__dropdown"}
+                             src={dropdown}/>
                     </a>
 
                     {/* Menu */}
 
                     <div>
                         {dropdownActif == true && (
-                            <img className="dropdown__caret" src={dropdown} />
+                            <img className="dropdown__caret" src={dropdown}/>
                         )}
                         <div className={dropdownActif == true ? "dropdown__menu active" : "dropdown__menu"}>
                             <div className="row-dropdown">
@@ -99,12 +106,12 @@ function Navbar() {
                                 <a href="#">Centre d'aide</a>
                             </div>
                             <div className="logout">
-                                    <a href="#">Se déconnecter</a>
-                                </div>
+                                <a href="#">Se déconnecter</a>
                             </div>
                         </div>
                     </div>
                 </div>
+            </div>
         </header>
     );
 }
