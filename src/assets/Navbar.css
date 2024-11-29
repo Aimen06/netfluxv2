@@ -86,10 +86,14 @@ nav {
 
   nav.active{
     all:unset;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    color: #f5f5f1;
+    white-space: nowrap;
   }
 
-
-  .overlay, .overlay.active {
+  .overlay.active {
     all:unset;
   }
 
@@ -129,7 +133,6 @@ nav {
     text-decoration: none;
     background-color: rgba(0,0,0,.9);
     border: 1px solid hsla(0,0%,100%,.15);
-
   }
 
   .dropdown__menu.active {
@@ -141,7 +144,7 @@ nav {
   }
 
   .closeSidebar.active {
-    all:unset;
+    display: none;
   }
 
 
