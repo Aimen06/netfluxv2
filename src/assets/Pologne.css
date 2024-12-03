@@ -21,6 +21,9 @@
 }
 
 .banner-container {
+    box-sizing: border-box;
+    width:100%;
+    max-width: 100%;
     position: relative;
     background-color: #141414;
     padding-bottom: 30px;
