@@ -197,7 +197,23 @@ nav {
     width:162.109px;
   }
 
+  nav a {
+    padding : 6px 10px;
+    text-decoration: none;
+    color: #f5f5f1;
+    background-color: #141414;
+  }
 
+  nav a.active-link {
+    border : 1px solid #f5f5f1;
+    color: #f5f5f1;
+    transform: scale(1.1);
+  }
 
+  nav a:hover {
+    text-decoration: underline;
+    text-decoration-color: #f5f5f1;
+    text-underline-offset: 9px;
+  }
 
 }

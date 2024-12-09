@@ -1,0 +1,24 @@
+.image-poster {
+    width: 35dvw;
+    border: 1px solid #f5f5f1;
+}
+
+.image-poster img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.txtDetail {
+    display: flex;
+    flex-direction: column;
+    padding-left: 30px;
+
+}
+
+.wrapper-detail {
+    padding-top: 80px;
+    padding-left: 30px;
+    display: flex;
+    background-color: #141414;
+    color: #f5f5f1;
+}

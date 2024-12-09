@@ -1,5 +1,6 @@
 import "../assets/Gallery.css"
 import {useState, useEffect} from 'react';
+import {Link} from "react-router-dom";
 function Trends()
 {
     const options = {
@@ -22,10 +23,10 @@ function Trends()
         <>
         <div className="tendance">Tendances actuelles</div>
          <div className="row">
-             {movies.map(function (movie) {
-                return (<div className="images">
-                    <img src={urlImage+movie.poster_path} alt={urlImage+movie.poster_path}/>
-                </div>)
+             {movies.map(function (tvshow) {
+                return ( <Link to={`/tvshow/${tvshow.id}`}><div className="images">
+                    <img src={urlImage+tvshow.poster_path} alt={urlImage+tvshow.poster_path}/>
+                </div></Link>)
             })}
         </div>
         </>

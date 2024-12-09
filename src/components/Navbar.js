@@ -17,7 +17,7 @@ import user from "../assets/images/dropdown/user.svg";
 import evenodd from "../assets/images/dropdown/evenodd.svg";
 
 import { useState } from "react";
-
+import { NavLink } from "react-router-dom";
 function Navbar() {
     const [dropdownActif, setDropdownActif] = useState(false);
     const [sidebarActif, setsidebarActif] = useState(false);
@@ -28,12 +28,14 @@ function Navbar() {
             <div className="header__left">
                 <img className="logo" src={logo} alt="Netflix"/>
                 <nav className={sidebarActif == true ? "active" : ""}>
-                    <a className="">Découverte</a>
-                    <a className="">Séries TV</a>
-                    <a className="">Films</a>
-                    <a className="">Programmes originaux</a>
-                    <a className="">Ajouts récents</a>
-                    <a className="">Ma liste</a>
+                    <NavLink to="/"  className={({ isActive }) => (isActive ? "active-link" : "")}> Accueil </NavLink>
+                    <NavLink
+                        to="/about"
+                        className={({ isActive }) => (isActive ? "active-link" : "")}
+                    >
+                        A propos
+                    </NavLink>
+                    <NavLink to="/contact"  className={({ isActive }) => (isActive ? "active-link" : "")}> Contact </NavLink>
                 </nav>
             </div>
             <a href="#" className="burger" onClick={() => setsidebarActif(true)}>

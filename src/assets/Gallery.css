@@ -28,10 +28,21 @@
     width: 204px;
     flex-shrink: 0;
 }
+.tendance+.row {
+    display: flex;
+    gap: 2px;
+}
+.tendance+.row>a {
+    display: flex;
+}
 
-.tendance+.row>.images {
-    width: unset;
-    height : 200px;
+.tendance+.row> a>.images {
+    height: 204px;
+    width: 124px;
+}
+
+.tendance+.row> a>.images>img{
+   object-fit: cover;
 }
 
 .images:hover {
